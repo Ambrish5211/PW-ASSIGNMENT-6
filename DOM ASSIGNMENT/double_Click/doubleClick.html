@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>doubleClick</title>
+  <style>
+    /* #box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+    } */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+  }
+
+  p {
+    padding-left: 22px;
+  }
+    .github {
+
+      height: 100px;
+      background-color: transparent;
+
+    }
+    div {
+      display:flex;
+      align-items:center;
+      gap: 14px;
+    }
+    button {
+      height: 50px;
+      background-color:green;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      color: black;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div>
+      
+   <img class="github"  src= "github.svg">
+  <button ondblclick=" 
+  doubleClick();
+  "
+   class="doubleClick">Double Click</button>
+ 
+  </div>
+  <script>
+    function doubleClick()
+    {
+      window.location.href='https://github.com/Ambrish5211';
+    }
+    </script> 
+</body>
+</html>

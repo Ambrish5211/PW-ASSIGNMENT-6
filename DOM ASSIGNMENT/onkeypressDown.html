@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>onkeypressDown</title>
+
+
+  <style>
+
+    .body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .cost-input {
+      font-size: 15px;
+      padding: 10px;
+    }
+
+  </style>
+
+
+</head>
+<body>
+
+
+      <p>Amazon Shipping Calculator</p>
+
+      <p>Orders under $40 = +$10 shipping. </p>
+
+      <p>Orders over $40= FREE SHIPPING</p>
+
+      <input placeholder="Cost of order" class="js-cost-input cost-input" 
+      onkeydown="
+      handleCostKeydown(event);
+      ">
+
+      <p>Press Enter Key</p>
+
+
+      <p class="js-total-cost"></p>
+
+
+  <script>
+
+
+    function handleCostKeydown (event) {
+    if(event.key === 'Enter')
+    {
+    calculateTotal();
+    }
+    }
+    
+    function calculateTotal () {
+     const inputElement = document.querySelector('.js-cost-input');
+     let cost = Number(inputElement.value);
+
+     if(cost<40){
+      cost = cost + 10;
+     }
+
+     document.querySelector('.js-total-cost')
+      .innerHTML = `Total Cost : $${cost}`;
+
+    }
+
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouseover Event Example</title>
+  <style>
+    #box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mouseover Event Example</h1>
+  <div id="box">Hover over me!</div>
+
+  <script>
+    const box = document.getElementById('box');
+
+    function handleMouseOver(event) {
+      box.style.backgroundColor = 'lightgreen';
+      box.textContent = 'Mouse over!';
+    }
+
+   
+
+    box.addEventListener('mouseover', handleMouseOver);
+   
+  </script>
+</body>
+</html>
